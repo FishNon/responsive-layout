@@ -3,7 +3,7 @@
 
 ## 1. 基础内容：
 
-#### 页面布局：
+### 页面布局：
 
 * 静态布局
 * 弹性布局
@@ -11,13 +11,13 @@
 * 流式布局
 * 响应式布局：是一个设计理念，是多项技术的综合体
 
-#### 响应式布局的三大技术成分：
+### 响应式布局的三大技术成分：
 
 * 流动网格（弹性网格布局）
 * 弹性图片
 * 媒介查询
 
-#### 媒体查询
+### 媒体查询
 
 * [菜鸟教程：响应式web开发-媒体查询](http://www.runoob.com/css/css-rwd-mediaqueries.html)
 * [菜鸟教程：@media查询](http://www.runoob.com/cssref/css3-pr-mediaquery.html)
@@ -39,15 +39,34 @@
         }
     }
   ```
-  
+
+### 视口：
+
+#### 基本概念：
+
 * CSS属性 - 视口宽度（viewport）
   width：
+  height:
 
 * CSS属性 - 屏幕宽度
 
-#### 对于手机浏览器：
+* 对于手机浏览器：有三个视口，分别为布局视口（layout viewport）、可视视口（visual viewport）、理想视口（ideal viewport）
 
-* 手机浏览器有三个视口，分别为：布局视口（layout viewport）、可视视口（visual viewport）、理想视口（ideal viewport）
+#### 理想视口：
+
+* 理想视口就是布局视口在一个设备上的最佳尺寸；
+* 使用理想视口（使用视口元标签）：
+```
+    <meta name="viewPort" content="
+        width=device-width,  // 将布局视口设置为理想视口
+        minimun-scale=1.0,   // 最小的缩放比例
+        maximun-scale=1.0,   // 最大的缩放比例
+        user-scalable=no,    // 禁止用户缩放
+        initial-scale=1.0"   // 默认缩放比例
+    />
+```
+
+### 分析设计图：
 
 
 

@@ -4,13 +4,13 @@ Project1：imooc
 ## 目录结构
  project01-imooc <br>
   |—— css <br>
-  |    |—— login.css <br>
-  |    |—— main.css <br>
-  |    |—— normalize.css <br>
+  |　　|—— login.css <br>
+  |　　|—— main.css <br>
+  |　　|—— normalize.css <br>
   | <br>
   |—— js <br>
-  |    |—— vender （外部链接的JS，如jQuery.js，jQuery.min.js等） <br>
-  |    |—— main.js <br>
+  |　　|—— vender （外部链接的JS，如jQuery.js，jQuery.min.js等） <br>
+  |　　|—— main.js <br>
   | <br>
   |—— img <br>
   | <br>

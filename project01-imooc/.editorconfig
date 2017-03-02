@@ -1,0 +1,21 @@
+# editorconfig.org
+
+# 这是最顶层的配置文件，不会再继续查找editorconfig文件了，下面的文件都应用整个editorconfig文件的规则
+root = true
+
+[*]
+charset = utf-8
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+# * - 通配符   [*] - 文件通配符
+# charset - 设置文件编码（此处为所有文件都用utf-8编码）
+# indent_size - 设置文档内容缩进的尺寸（值可以设置为num，表示空格的数量；也可以设置为tab，但接下来就需要设置tab_width）
+# insert_final_newline - true表示每个文件以一个空行结尾，false表示不以空白行结尾
+
+
+[*.md]
+insert_final_newline = false
+
+

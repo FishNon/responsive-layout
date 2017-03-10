@@ -10,3 +10,8 @@ html{
     font-size:62.5%;
     color:#222;
 }
+
+::selection{
+    background: #b3d4fc;
+    text-shadow: none;
+}

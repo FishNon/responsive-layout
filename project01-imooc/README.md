@@ -36,3 +36,16 @@ http://www.cnblogs.com/nidilzhang/archive/2010/01/09/1642887.html
 <![endif]-->
 ```
 [更新浏览器](http://browsehappy.com/)
+
+* CSS resets 及 Normalize.css
+[Normalize 官网](http://necolas.github.io/normalize.css/)
+
+* 单位：
+  * px : 相对于屏幕分辨率的单位，1px相当于1个像素
+  * em : 相对长度单位;
+    1. em的相对参考物是父元素的`font-size`;
+    2. em具有继承的特点;
+    3. 当没有设置`font-size`时，浏览器会有一个默认的em设置：`1em = 16px`;
+    4. em的缺点：容易混乱
+  * rem : 相对参照物为根元素html，相对于参照物固定不变;当没有设置`font-size`时，浏览器会有一个默认的`rem`值，`1rem = 16px`;
+

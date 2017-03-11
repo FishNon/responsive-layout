@@ -8,15 +8,14 @@
             background: lightgrey;
         }
 
-        .clearfix:after {
+        .clearfix:after,
+        .clearfix:before {
             content: '';
             display: block;
-            height: 0;
-            clear: both;
-            visibility: hidden;
         }
-        .clearfix{
-            zoom:1;
+
+        .clearfix:after {
+            clear: both;
         }
 
         .demo {

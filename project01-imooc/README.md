@@ -1,15 +1,16 @@
 Project01-imooc
 ===============
 
-### 一、查看：
-    [点击查看]()
+### 一、效果演示：
+ [点击查看](https://fishnon.github.io/responsive-layout/project01-imooc/)
 
 ### 二、实现：
+ [点击查看](https://github.com/FishNon/responsive-layout/tree/master/project01-imooc)
 
 ### 三、知识点：
 
 #### 1 IE的渲染：
-http://www.cnblogs.com/nidilzhang/archive/2010/01/09/1642887.html
+相关链接：[使用X-UA-Compatible来设置IE浏览器兼容模式](http://www.cnblogs.com/nidilzhang/archive/2010/01/09/1642887.html)
 ```
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 ```
@@ -69,28 +70,58 @@ http://www.cnblogs.com/nidilzhang/archive/2010/01/09/1642887.html
 #### 7 !important
 
 #### 8 CSS 属性：
-  * **visibility 属性：**
+  * **visibility 属性：**<br>
   **描述：**规定元素是否可见<br>
-  **值：**visible | hidden | collapse | inherit (默认值，可见 | 不可见 | 表格一行或一列处于不可见状态 | 继承父元素的设置)
-  **注意：**即使不可见的元素也会占据原本的空间
+  **值：**visible | hidden | collapse | inherit (默认值，可见 | 不可见 | 表格一行或一列处于不可见状态 | 继承父元素的设置)<br>
+  **注意：**即使不可见的元素也会占据原本的空间<br>
 
-  * **flex 属性：**
-  **描述：**
-  **值：**
-  **注意：**
+  * **flex 属性：**<br>
+  **描述：**<br>
+  **值：**<br>
+  **注意：**<br>
 
-  * **zoom 属性：**
-  **描述：**设置或检索对象的缩放比例；
-  **值：**number | percentage (用浮点数来定义缩放比例 | 用百分比来定义缩放比例)
-  **注意：**不允许使用负值
+  * **zoom 属性：**<br>
+  **描述：**设置或检索对象的缩放比例；<br>
+  **值：**number | percentage (用浮点数来定义缩放比例 | 用百分比来定义缩放比例)<br>
+  **注意：**不允许使用负值<br>
 
-  * ** overflow属性：**
-  **描述：**
-  **值：**
-  **注意：**
+  * ** overflow属性：**<br>
+  **描述：**<br>
+  **值：**<br>
+  **注意：**<br>
+
+  * ** vertical-align属性：**<br>
+  **描述：**<br>
+  **值：**<br>
+  **注意：**<br>
+
+  * ** text-overflow属性：**<br>
+  **描述：**<br>
+  **值：**<br>
+  **注意：**<br>
+
+  * ** white-space属性：**<br>
+  **描述：**<br>
+  **值：**<br>
+  **注意：**<br>
+
+  * ** cursor属性：**<br>
+  **描述：**<br>
+  **值：**<br>
+  **注意：**<br>
+
+  * ** filter属性：**<br>
+  **描述：**<br>
+  **值：**<br>
+  **注意：**<br>
+
+  * ** calc()属性：**<br>
+  **描述：**动态计算长度值（eg.width），支持+、-、×、/<br>
+  **使用：**如：`width : calc(100% - 10px);`<br>
+  **注意：**使用标准的数学运算优先级规则<br>
 
 #### 9 清楚浮动的方法：
-  * 添加一个空元素，并设置`clear:both;`如下：
+  * 添加一个空元素，并设置`clear:both;`如下：<br>
   ```
       <style>
         .container{
@@ -108,7 +139,7 @@ http://www.cnblogs.com/nidilzhang/archive/2010/01/09/1642887.html
           <div style="clear: both"></div>
       </div>
   ```
-  * 给父元素添加`overflow:auto;`样式，如下：
+  * 给父元素添加`overflow:auto;`样式，如下：<br>
   ```
       <style>
           .container{
@@ -126,11 +157,11 @@ http://www.cnblogs.com/nidilzhang/archive/2010/01/09/1642887.html
           <div class="demo">模块二</div>
       </div>
   ```
-  * 使父元素和子元素一样，浮动起来，即给父元素设置`float:left|right;`；
+  * 使父元素和子元素一样，浮动起来，即给父元素设置`float:left|right;`；<br>
 
-  上面三种，或多或少都存在一些问题，因此，可以使用下面的方式：
+  上面三种，或多或少都存在一些问题，因此，可以使用下面的方式：<br>
 
-  * 给父元素添加下面的样式：
+  * 给父元素添加下面的样式：<br>
   ```
     .clearfix:after{
         content : '';
@@ -144,6 +175,17 @@ http://www.cnblogs.com/nidilzhang/archive/2010/01/09/1642887.html
         zoom : 1;
     }
   ```
+  * 或给父元素添加下面的样式：<br>
+  ```
+    .clearfix:after,
+    .clearfix:before {
+        content: '';
+        display: block;
+    }
+    .clearfix:after {
+        clear: both;
+    }
+  ```
 
 #### 10 CSS定位规则——BFC与IFC
  **BFC**（Block Formatting Contexts）
@@ -155,19 +197,25 @@ http://www.cnblogs.com/nidilzhang/archive/2010/01/09/1642887.html
     * `overflow`的值不为`visible`；
   * 应用：多栏布局等
 
+
  **IFC**（Inline Formatting Contexts）
  * 定义：直译为“内联格式化上下文”，IFC的`line box`（线框）高度由其包含行内元素中最高的实际高度计算而来。
  * 注意：IFC中的`line box`一般左右都是贴紧着整个IFC，但是会因为`float`元素而扰乱。
  * 应用：水平居中、垂直居中
 
+
  **GFC**（GridLayout Formatting Contexts）
  * 定义：直译为“网格布局格式化上下文”，当为一个元素设置`display`值的`grid`的时候，此元素将会获得一个独立的渲染区域，可以通过网格容器上定义网格定义行和网格定义列属性各在网格项目上定义网格行和网格列为每一个网格项目定义位置和空间。
  * 优点：GridLayout会有更加丰富的属性来控制行列，控制对齐以及更为精细的渲染语义和控制。
+
 
  **FFC**（Flex Formatting Contexts）
  * 定义：直译为“自适应格式化上下文”，`display`值为`flex`或`inline-flex`可以得到一个伸缩容器。设置为`flex`的容器被渲染为一个块级元素，而被设置为`inline-flex`的容器则被渲染为一个行内元素；
  * 其他：伸缩容器中的每一个子元素都是一个伸缩元素。伸缩元素可以时任意数量的。伸缩元素外和伸缩元素内 的一切元素都不影响。即，`Flexbox`定义了伸缩容器内伸缩项目该如何布局。
 
+
  **相关链接：**
     * [CSS中的BFC、IFC、GFC、FFC](http://www.cnblogs.com/dingyufenglian/p/4845477.html)
     * [理解CSS中的BFC](http://www.w3cplus.com/css/understanding-block-formatting-contexts-in-css.html)
+
+#### 11

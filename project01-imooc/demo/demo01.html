@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清楚浮动</title>
+    <style>
+        .container {
+            background: lightgrey;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .clearfix{
+            zoom:1;
+        }
+
+        .demo {
+            float: left;
+            width: 120px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="container clearfix">
+    <div class="demo">dsada</div>
+    <div class="demo">dasd</div>
+</div>
+</body>
+</html>

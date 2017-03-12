@@ -222,6 +222,7 @@ Project01-imooc
       <div style="clear: both"></div>
   </div>
   ```
+
   * 给父元素添加`overflow:auto;`样式，如下：<br>
   ```
   <style>
@@ -240,6 +241,7 @@ Project01-imooc
       <div class="demo">模块二</div>
   </div>
   ```
+
   * 使父元素和子元素一样，浮动起来，即给父元素设置`float:left|right;`；<br>
 
   上面三种，或多或少都存在一些问题，因此，可以使用下面的方式：<br>
@@ -258,6 +260,7 @@ Project01-imooc
         zoom : 1;
     }
   ```
+
   * 或给父元素添加下面的样式：<br>
   ```
   .clearfix:after,

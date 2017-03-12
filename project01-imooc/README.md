@@ -43,6 +43,7 @@ Project01-imooc
 #### 2 理想视口：
   * 理想视口就是布局视口在一个设备上的最佳尺寸；
   * 使用理想视口（使用视口元标签）：
+
   ```
       <meta name="viewPort" content="
           width=device-width,  // 将布局视口设置为理想视口

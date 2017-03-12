@@ -221,7 +221,7 @@ Project01-imooc
       <div class="demo">模块二</div>
       <div style="clear: both"></div>
   </div>
-  ```
+
   * 给父元素添加`overflow:auto;`样式，如下：<br>
   ```
   <style>
@@ -324,17 +324,20 @@ Project01-imooc
    })
    $(window).on('realize load' , makeImageResponsive)
    ```
+
    ② `srcset`<br>
    ```
    <img src="img/480.png"
         srcset="img/480.png 480w, img/800.png 800w, img/1600.png 1600w">
    ```
+
    ③ `srcset`配合`sizes`<br>
    ```
    <img src="img/480.png"
            srcset="img/480.png 480w, img/800.png 800w, img/1600.png 1600w"
            sizes:"(min-width:800px) 800px, 100vw">
    ```
+
    ④ `picture`<br>
    ```
    <picture>

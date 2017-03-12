@@ -221,7 +221,7 @@ Project01-imooc
       <div class="demo">模块二</div>
       <div style="clear: both"></div>
   </div>
-
+  ```
   * 给父元素添加`overflow:auto;`样式，如下：<br>
   ```
   <style>
@@ -307,6 +307,7 @@ Project01-imooc
    ② 根据设备大小加载不同的图片；<br>
  * 实现方式：<br>
    ① JS或服务端来控制图片的加载；<br>
+
    ```
    // 前提：链接jQuery库
    $(document).ready(function(){
@@ -326,12 +327,14 @@ Project01-imooc
    ```
 
    ② `srcset`<br>
+
    ```
    <img src="img/480.png"
         srcset="img/480.png 480w, img/800.png 800w, img/1600.png 1600w">
    ```
 
    ③ `srcset`配合`sizes`<br>
+
    ```
    <img src="img/480.png"
            srcset="img/480.png 480w, img/800.png 800w, img/1600.png 1600w"
@@ -339,6 +342,7 @@ Project01-imooc
    ```
 
    ④ `picture`<br>
+
    ```
    <picture>
       <source media="(min-width:36em)"

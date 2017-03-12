@@ -206,39 +206,39 @@ Project01-imooc
 #### 9 清楚浮动的方法：
   * 添加一个空元素，并设置`clear:both;`如下：<br>
   ```
-      <style>
-        .container{
-            background: lightgrey;
-        }
-        .demo{
-            float: left;
-            width:120px;
-            height:200px;
-        }
-      </style>
-      <div class="container">
-          <div class="demo">模块一</div>
-          <div class="demo">模块二</div>
-          <div style="clear: both"></div>
-      </div>
+  <style>
+    .container{
+        background: lightgrey;
+    }
+    .demo{
+        float: left;
+        width:120px;
+        height:200px;
+    }
+  </style>
+  <div class="container">
+      <div class="demo">模块一</div>
+      <div class="demo">模块二</div>
+      <div style="clear: both"></div>
+  </div>
   ```
   * 给父元素添加`overflow:auto;`样式，如下：<br>
   ```
-      <style>
-          .container{
-              overflow: auto;
-              background: lightgrey;
-          }
-          .demo{
-              float: left;
-              width:120px;
-              height:200px;
-          }
-      </style>
-      <div class="container">
-          <div class="demo">模块一</div>
-          <div class="demo">模块二</div>
-      </div>
+  <style>
+      .container{
+          overflow: auto;
+          background: lightgrey;
+      }
+      .demo{
+          float: left;
+          width:120px;
+          height:200px;
+      }
+  </style>
+  <div class="container">
+      <div class="demo">模块一</div>
+      <div class="demo">模块二</div>
+  </div>
   ```
   * 使父元素和子元素一样，浮动起来，即给父元素设置`float:left|right;`；<br>
 
@@ -260,14 +260,14 @@ Project01-imooc
   ```
   * 或给父元素添加下面的样式：<br>
   ```
-    .clearfix:after,
-    .clearfix:before {
-        content: '';
-        display: block;
-    }
-    .clearfix:after {
-        clear: both;
-    }
+  .clearfix:after,
+  .clearfix:before {
+      content: '';
+      display: block;
+  }
+  .clearfix:after {
+      clear: both;
+  }
   ```
 
 #### 10 CSS定位规则——BFC与IFC
@@ -298,14 +298,14 @@ Project01-imooc
 
 
  **相关链接：**
-    * [CSS中的BFC、IFC、GFC、FFC](http://www.cnblogs.com/dingyufenglian/p/4845477.html)
-    * [理解CSS中的BFC](http://www.w3cplus.com/css/understanding-block-formatting-contexts-in-css.html)
+  * [CSS中的BFC、IFC、GFC、FFC](http://www.cnblogs.com/dingyufenglian/p/4845477.html)
+  * [理解CSS中的BFC](http://www.w3cplus.com/css/understanding-block-formatting-contexts-in-css.html)
 
 #### 11 响应式图片：
  * 响应式图片主要指：<br>
    ① 图片排版和布局的响应式；<br>
    ② 根据设备大小加载不同的图片；<br>
- * 实现方式：
+ * 实现方式：<br>
    ① JS或服务端来控制图片的加载；<br>
    ```
    // 前提：链接jQuery库
@@ -345,6 +345,3 @@ Project01-imooc
    </picture>
    ```
    ⑤ SVG<br>
-
- *
- *

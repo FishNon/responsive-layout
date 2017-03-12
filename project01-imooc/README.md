@@ -63,9 +63,43 @@ Project01-imooc
     ```
 
 #### 6 CSS 选择器：
-  * **::selection 选择器：**
-  **描述：**匹配被用户选取的部分；<br>
-  **注意：**只能向`::selection`选择器应用少量的CSS属性，`color`、`background`、`cursor`、`outline`。
+  * **基本选择器：**
+    * 通配符选择器（*）：匹配所有的元素，或某个元素下面的所有元素`div *`；
+    * 元素选择器（Element）
+    * 类选择器（.class）
+    * ID选择器（#id）
+    * 后代（包含）选择器（Element Element）：可以是子元素、孙子元素等
+    * 子元素选择器（Element > Element）：只能选择某个元素的直接子元素；
+    * 相邻兄弟选择器（Element1 + Element2）：能够选择**紧跟**在Element1之后的Element2元素，两个元素有相同的父元素；
+    * 通用兄弟选择器（Element1 ~ Element2）：选择与Element1 元素相邻的后面的所有的兄弟元素；
+  * **属性选择器：**
+    * Element[attr]：匹配所有定义了`attr`属性的元素；
+    * Element[attr = "value"]：匹配所有定义了`attr`属性，且属性值为`value`的元素；
+    * Element[attr ^= "value"]：匹配所有定义了`attr`属性，且属性值以`value`开头的元素；
+    * Element[attr $= "value"]：匹配所有定义了`attr`属性，且属性值以`value`结尾的元素；
+    * Element[attr *= "value"]：匹配所有定义了`attr`属性，且属性值包含`value`的元素；
+    * Element[attr ~= "value"]：匹配所有定义了`attr`属性，且属性值包含`value`的元素，即使是包含空格的属性值，也可以模糊的选择到；
+    * Element[attr != "value"]：匹配所有定义了`attr`属性，且属性值以`value`或`value-`开头的元素
+  * **伪类和伪元素选择器：**
+    * :link、:visited、:hover、:active、:focus；
+    * :enabled（启用）、:disabled（禁用）、:checked（选中）；
+    * :first-child：选择某个元素的第一个元素；
+    * :last-child：选择某个元素的最后一个元素；
+    * :nth-child()：匹配括号中指定的子元素，括号里可以是表达式（如：2n表示选中0、2、4...）、也可以是整数值，此外还可以使用`even`表示偶数，使用`odd`表示奇数；
+    * :nth-last-child(n)：同`:nth-child()`，只是是从后向前匹配而已；
+    * :nth-of-type()：匹配括号中指定的同类型子元素；
+    * :nth-last-of-child()：同`:nth-of-type()`，只是是从后向前匹配而已；
+    * :first-of-type：匹配属于其父元素的首个子元素的每个元素；
+    * :last-of-type：匹配属于其父元素的最后一个子元素的每个元素；
+    * :only-child：匹配属于其父元素的唯一子元素的每个元素；
+    * :only-of-type：匹配属于其父元素的唯一指定类型的子元素的每个元素；
+    * :empty：匹配没有任何子节点的元素，即使是空格也没有；
+    * :not(selector)：匹配非selector元素外的所有元素；
+    * :first-line：匹配指定元素的首行，`p:first-line`（匹配所有p元素的第一行）；
+    * :first-letter：匹配指定元素的首字母，`p:first-letter`（匹配所有p元素的第一个字母）；
+    * :before：配合`content`属性使用，在元素前面添加内容；
+    * :after：配合`content`属性使用，在元后面添加内容；
+    * ::selection：匹配被用户选取的部分；只能向`::selection`选择器应用少量的CSS属性，`color`、`background`、`cursor`、`outline`。
 
 #### 7 !important
 
@@ -111,6 +145,31 @@ Project01-imooc
   **注意：**<br>
 
   * ** filter属性：**<br>
+  **描述：**<br>
+  **值：**<br>
+  **注意：**<br>
+
+  * ** page-break-inside属性：**<br>
+  **描述：**<br>
+  **值：**<br>
+  **注意：**<br>
+
+  * ** page-break-after属性：**<br>
+  **描述：**<br>
+  **值：**<br>
+  **注意：**<br>
+
+  * ** page-break-before属性：**<br>
+  **描述：**<br>
+  **值：**<br>
+  **注意：**<br>
+
+  * ** orphans属性：**<br>
+  **描述：**<br>
+  **值：**<br>
+  **注意：**<br>
+
+  * ** widows属性：**<br>
   **描述：**<br>
   **值：**<br>
   **注意：**<br>

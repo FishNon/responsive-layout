@@ -2,10 +2,34 @@ Project01-imooc
 ===============
 
 ### 一、效果演示：
- [点击查看](https://fishnon.github.io/responsive-layout/project01-imooc/)
+ * [点击查看](https://fishnon.github.io/responsive-layout/project01-imooc/)
+ * 使用`http-server`运行访问：
+   * [下载安装NodeJs](http://nodejs.cn/download/)
+   * 全局环境下安装`http-server`：
+   ```
+      npm install http-server -g
+   ```
+   * 运行：
+   ```
+      http-server
+   ```
+   * 运行后会获得两个http地址，使用本机连个地址都能访问，但是使用其他设备只能访问到第二个地址；
 
-### 二、实现：
- [点击查看](https://github.com/FishNon/responsive-layout/tree/master/project01-imooc)
+### 二、技术点：
+ * 第三部分的知识点；
+ * 第三方组件：
+     * 轮播：[官网 OwlCarousel2](http://owlcarousel2.github.io/OwlCarousel2/)
+     * [CDN OwlCarousel2 ](https://cdnjs.com/libraries/OwlCarousel2)
+       设置`owl.theme.default.min.css`文件的内容；
+     * jQuery：[官网 jQuery](http://jquery.com/)
+     * 处理响应式图片兼容性问题的库：[官网 picturefill](http://scottjehl.github.io/picturefill/)
+     * [官网 http-server](https://www.npmjs.com/package/http-server)
+ * 工具：
+     * [在线绘制SVG图片](http://editor.method.ac/)
+     * [在线绘制SVG图片](https://icomoon.io/)
+     * [在线快速搜索查看兼容性](http://caniuse.com/)
+     * [在线压缩SVG图片](http://iconizr.com/)
+     * [在线压缩PNG/JPG图片](https://tinypng.com/)
 
 ### 三、知识点：
 
@@ -277,4 +301,50 @@ Project01-imooc
     * [CSS中的BFC、IFC、GFC、FFC](http://www.cnblogs.com/dingyufenglian/p/4845477.html)
     * [理解CSS中的BFC](http://www.w3cplus.com/css/understanding-block-formatting-contexts-in-css.html)
 
-#### 11
+#### 11 响应式图片：
+ * 响应式图片主要指：<br>
+   ① 图片排版和布局的响应式；<br>
+   ② 根据设备大小加载不同的图片；<br>
+ * 实现方式：
+   ① JS或服务端来控制图片的加载；<br>
+   ```
+   // 前提：链接jQuery库
+   $(document).ready(function(){
+      function makeImageResponsive(){
+        var width = $(window).width();
+        var img = $(".content img");
+        if(width <= 480){
+          img.attr('src','img/480.png');
+        }else if(width <= 800){
+          img.attr('src','img/800.png');
+        }else{
+            img.attr('src','img/1600.png');
+        }
+      }
+   })
+   $(window).on('realize load' , makeImageResponsive)
+   ```
+   ② `srcset`<br>
+   ```
+   <img src="img/480.png"
+        srcset="img/480.png 480w, img/800.png 800w, img/1600.png 1600w">
+   ```
+   ③ `srcset`配合`sizes`<br>
+   ```
+   <img src="img/480.png"
+           srcset="img/480.png 480w, img/800.png 800w, img/1600.png 1600w"
+           sizes:"(min-width:800px) 800px, 100vw">
+   ```
+   ④ `picture`<br>
+   ```
+   <picture>
+      <source media="(min-width:36em)"
+              srcset="img/demo01.png 768w" />
+      <source srcset="img/demo02.png 1800w" />
+      <img class="image" src="img/demo02.png">
+   </picture>
+   ```
+   ⑤ SVG<br>
+
+ *
+ *
